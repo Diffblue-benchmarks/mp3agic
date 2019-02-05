@@ -1,0 +1,127 @@
+# Tested on Deeptest release 1.10.0
+cbmcArguments:
+  cover-function-only: false
+  depth: false
+  do-not-test-methods-with-access: [ private ]
+  java-generate-no-comments: true
+  no-trivial-tests: true
+phases:
+-
+  timeout: 300
+  cbmcArguments:
+    java-assume-inputs-non-null: true
+    max-nondet-array-length: 10
+    string-non-empty: true
+    unwind: 1
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 20
+    unwind: 2
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
+units:
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/MpegFrame.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/MpegFrame.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/Mp3File.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/Mp3File.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/BaseException.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/BaseException.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/EncodedText.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/EncodedText.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/AbstractID3v2Tag.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/AbstractID3v2Tag.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2TagFactory.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2TagFactory.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2ChapterTOCFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2ChapterTOCFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v1Genres.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v1Genres.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/BufferTools.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/BufferTools.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v1Tag.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v1Tag.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2ChapterFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2ChapterFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2PictureFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2PictureFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2CommentFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2CommentFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2UrlFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2UrlFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2FrameSet.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2FrameSet.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2ObseletePictureFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2ObseletePictureFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3Wrapper.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3Wrapper.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2TextFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2TextFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/ID3v2PopmFrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/ID3v2PopmFrameData.java
+  - target:
+    - dir: target/classes
+      file: com/mpatric/mp3agic/AbstractID3v2FrameData.class
+      sourceDir: src/main/java
+      sourceFile: com/mpatric/mp3agic/AbstractID3v2FrameData.java
